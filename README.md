@@ -4,7 +4,7 @@
 **Dataset used: [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset).
 This dataset has more than 50,000 images of 43 classes.**
 
-**I was able to reach a +99% validation accuracy, and a 98.1% testing accuracy.**
+**I was able to reach a +99% validation accuracy, and a 97.6% testing accuracy.**
 
 ## Pipeline architecture:
 - **Load The Data.**
@@ -119,11 +119,9 @@ In this step, we will apply several preprocessing steps to the input images to a
 3. Local Histogram Equalization.
 4. Normalization.
 
-1.
-**Shuffling**: In general, we shuffle the training data to increase randomness and variety in training dataset, in order for the model to be more stable. We will use `sklearn` to shuffle our data.
+1. **Shuffling**: In general, we shuffle the training data to increase randomness and variety in training dataset, in order for the model to be more stable. We will use `sklearn` to shuffle our data.
 
-2.
-**Grayscaling**: In their paper ["Traffic Sign Recognition with Multi-Scale Convolutional Networks"](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) published in 2011, P. Sermanet and Y. LeCun stated that using grayscale images instead of color improves the ConvNet's accuracy. We will use `OpenCV` to convert the training images into grey scale.
+2. **Grayscaling**: In their paper ["Traffic Sign Recognition with Multi-Scale Convolutional Networks"](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) published in 2011, P. Sermanet and Y. LeCun stated that using grayscale images instead of color improves the ConvNet's accuracy. We will use `OpenCV` to convert the training images into grey scale.
 
 <figure>
  <img src="./traffic-signs-data/Screenshots/Gray.png" width="1072" alt="Combined Image" />
@@ -132,8 +130,7 @@ In this step, we will apply several preprocessing steps to the input images to a
  </figcaption>
 </figure>
 
-3.
-**Local Histogram Equalization**: This technique simply spreads out the most frequent intensity values in an image, resulting in enhancing images with low contrast. Applying this technique will be very helpfull in our case since the dataset in hand has real world images, and many of them has low contrast. We will use `skimage` to apply local histogram equalization to the training images.
+3. **Local Histogram Equalization**: This technique simply spreads out the most frequent intensity values in an image, resulting in enhancing images with low contrast. Applying this technique will be very helpfull in our case since the dataset in hand has real world images, and many of them has low contrast. We will use `skimage` to apply local histogram equalization to the training images.
 
 <figure>
  <img src="./traffic-signs-data/Screenshots/Equalized.png" width="1072" alt="Combined Image" />
@@ -142,8 +139,7 @@ In this step, we will apply several preprocessing steps to the input images to a
  </figcaption>
 </figure>
 
-4.
-**Normalization**: Normalization is a process that changes the range of pixel intensity values. Usually the image data should be normalized so that the data has mean zero and equal variance.
+4. **Normalization**: Normalization is a process that changes the range of pixel intensity values. Usually the image data should be normalized so that the data has mean zero and equal variance.
 
 <figure>
  <img src="./traffic-signs-data/Screenshots/Normalized.png" width="1072" alt="Combined Image" />
@@ -174,7 +170,7 @@ LeNet-5 is a convolutional network designed for handwritten and machine-printed 
 
 **LeNet-5 architecture:**
 <figure>
- <img src="./traffic-signs-data/Screenshots/LeNet.png" width="1072" alt="Combined Image" />
+ <img src="LeNet.png" width="1072" alt="Combined Image" />
  <figcaption>
  <p></p> 
  </figcaption>
@@ -213,7 +209,7 @@ VGGNet was first introduced in 2014 by K. Simonyan and A. Zisserman from the Uni
 
 **VGGNet architecture:**
 <figure>
- <img src="./traffic-signs-data/Screenshots/VGGNet.png" width="1072" alt="Combined Image" />
+ <img src="VGGNet.png" width="1072" alt="Combined Image" />
  <figcaption>
  <p></p> 
  </figcaption>
@@ -342,6 +338,14 @@ Number of new testing examples:  5
  </figcaption>
 </figure>
 
+Now we'll input these 5 images to the VGGNet model and output the top 5 softmax proabilities of each prediction.
+
+<figure>
+ <img src="./traffic-signs-data/Screenshots/TopSoft.png" width="1072" alt="Combined Image" />
+ <figcaption>
+ <p></p> 
+ </figcaption>
+</figure>
 
 The VGGNet model was able to predict the right class for each of the 5 new test images. Test Accuracy = 100.0%.
 In all cases, the model was very certain (80% - 100%).
