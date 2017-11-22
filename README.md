@@ -281,12 +281,36 @@ Now, we'll run the training data through the training pipeline to train the mode
 
 ### LeNet Model
 
-<figure>
- <img src="./traffic-signs-data/Screenshots/LeNetEpochs.png" alt="Combined Image" />
- <figcaption>
- <p></p> 
- </figcaption>
-</figure>
+EPOCH 1 : Validation Accuracy = 81.451%
+EPOCH 2 : Validation Accuracy = 87.755%
+EPOCH 3 : Validation Accuracy = 90.113%
+EPOCH 4 : Validation Accuracy = 91.519%
+EPOCH 5 : Validation Accuracy = 90.658%
+EPOCH 6 : Validation Accuracy = 92.608%
+EPOCH 7 : Validation Accuracy = 92.902%
+EPOCH 8 : Validation Accuracy = 92.585%
+EPOCH 9 : Validation Accuracy = 92.993%
+EPOCH 10 : Validation Accuracy = 92.766%
+EPOCH 11 : Validation Accuracy = 93.356%
+EPOCH 12 : Validation Accuracy = 93.469%
+EPOCH 13 : Validation Accuracy = 93.832%
+EPOCH 14 : Validation Accuracy = 94.603%
+EPOCH 15 : Validation Accuracy = 93.333%
+EPOCH 16 : Validation Accuracy = 93.787%
+EPOCH 17 : Validation Accuracy = 94.263%
+EPOCH 18 : Validation Accuracy = 92.857%
+EPOCH 19 : Validation Accuracy = 93.832%
+EPOCH 20 : Validation Accuracy = 93.605%
+EPOCH 21 : Validation Accuracy = 93.447%
+EPOCH 22 : Validation Accuracy = 94.286%
+EPOCH 23 : Validation Accuracy = 94.671%
+EPOCH 24 : Validation Accuracy = 94.172%
+EPOCH 25 : Validation Accuracy = 94.399%
+EPOCH 26 : Validation Accuracy = 95.057%
+EPOCH 27 : Validation Accuracy = 95.329%
+EPOCH 28 : Validation Accuracy = 94.218%
+EPOCH 29 : Validation Accuracy = 94.286%
+EPOCH 30 : Validation Accuracy = 94.853%
 
 We've been able to reach a maximum accuracy of **95.3%** on the validation set over 30 epochs, using a learning rate of 0.001.
 
@@ -294,12 +318,36 @@ Now, we'll train the VGGNet model and evaluate it's accuracy.
 
 ### VGGNet Model
 
-<figure>
- <img src="./traffic-signs-data/Screenshots/VGGNetEpochs.png" alt="Combined Image" />
- <figcaption>
- <p></p> 
- </figcaption>
-</figure>
+EPOCH 1 : Validation Accuracy = 31.655%
+EPOCH 2 : Validation Accuracy = 59.592%
+EPOCH 3 : Validation Accuracy = 78.639%
+EPOCH 4 : Validation Accuracy = 88.617%
+EPOCH 5 : Validation Accuracy = 92.812%
+EPOCH 6 : Validation Accuracy = 95.601%
+EPOCH 7 : Validation Accuracy = 96.667%
+EPOCH 8 : Validation Accuracy = 97.528%
+EPOCH 9 : Validation Accuracy = 98.390%
+EPOCH 10 : Validation Accuracy = 98.322%
+EPOCH 11 : Validation Accuracy = 98.776%
+EPOCH 12 : Validation Accuracy = 98.730%
+EPOCH 13 : Validation Accuracy = 98.617%
+EPOCH 14 : Validation Accuracy = 98.571%
+EPOCH 15 : Validation Accuracy = 99.025%
+EPOCH 16 : Validation Accuracy = 99.116%
+EPOCH 17 : Validation Accuracy = 98.776%
+EPOCH 18 : Validation Accuracy = 98.707%
+EPOCH 19 : Validation Accuracy = 98.526%
+EPOCH 20 : Validation Accuracy = 98.685%
+EPOCH 21 : Validation Accuracy = 99.297%
+EPOCH 22 : Validation Accuracy = 99.320%
+EPOCH 23 : Validation Accuracy = 99.297%
+EPOCH 24 : Validation Accuracy = 99.161%
+EPOCH 25 : Validation Accuracy = 98.798%
+EPOCH 26 : Validation Accuracy = 98.707%
+EPOCH 27 : Validation Accuracy = 99.048%
+EPOCH 28 : Validation Accuracy = 99.116%
+EPOCH 29 : Validation Accuracy = 98.458%
+EPOCH 30 : Validation Accuracy = 99.161%
 
 Using VGGNet, we've been able to reach a maximum **validation accuracy of 99.3%**. As you can observe, the model has nearly saturated after only 10 epochs, so we can reduce the epochs to 10 and save computational resources.
 
