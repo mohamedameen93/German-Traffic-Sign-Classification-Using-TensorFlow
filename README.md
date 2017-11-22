@@ -282,7 +282,7 @@ Now, we'll run the training data through the training pipeline to train the mode
 ### LeNet Model
 
 <figure>
- <img src="./traffic-signs-data/Screenshots/LeNetEpochs.png" width="1072" alt="Combined Image" />
+ <img src="./traffic-signs-data/Screenshots/LeNetEpochs.png" alt="Combined Image" />
  <figcaption>
  <p></p> 
  </figcaption>
@@ -295,7 +295,7 @@ Now, we'll train the VGGNet model and evaluate it's accuracy.
 ### VGGNet Model
 
 <figure>
- <img src="./traffic-signs-data/Screenshots/VGGNetEpochs.png" width="1072" alt="Combined Image" />
+ <img src="./traffic-signs-data/Screenshots/VGGNetEpochs.png" alt="Combined Image" />
  <figcaption>
  <p></p> 
  </figcaption>
