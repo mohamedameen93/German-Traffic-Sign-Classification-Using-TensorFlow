@@ -280,7 +280,7 @@ Now, we'll run the training data through the training pipeline to train the mode
 - A low accuracy on the training and validation sets imply underfitting. A high accuracy on the training set but low accuracy on the validation set implies overfitting.
 
 ### LeNet Model
-
+```
 EPOCH 1 : Validation Accuracy = 81.451%
 EPOCH 2 : Validation Accuracy = 87.755%
 EPOCH 3 : Validation Accuracy = 90.113%
@@ -311,13 +311,13 @@ EPOCH 27 : Validation Accuracy = 95.329%
 EPOCH 28 : Validation Accuracy = 94.218%
 EPOCH 29 : Validation Accuracy = 94.286%
 EPOCH 30 : Validation Accuracy = 94.853%
-
+```
 We've been able to reach a maximum accuracy of **95.3%** on the validation set over 30 epochs, using a learning rate of 0.001.
 
 Now, we'll train the VGGNet model and evaluate it's accuracy.
 
 ### VGGNet Model
-
+```
 EPOCH 1 : Validation Accuracy = 31.655%
 EPOCH 2 : Validation Accuracy = 59.592%
 EPOCH 3 : Validation Accuracy = 78.639%
@@ -348,6 +348,7 @@ EPOCH 27 : Validation Accuracy = 99.048%
 EPOCH 28 : Validation Accuracy = 99.116%
 EPOCH 29 : Validation Accuracy = 98.458%
 EPOCH 30 : Validation Accuracy = 99.161%
+```
 
 Using VGGNet, we've been able to reach a maximum **validation accuracy of 99.3%**. As you can observe, the model has nearly saturated after only 10 epochs, so we can reduce the epochs to 10 and save computational resources.
 
