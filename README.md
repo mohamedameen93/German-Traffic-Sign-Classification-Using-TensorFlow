@@ -32,6 +32,8 @@ I'll explain each step in details below.
 ---
 ## Step 1: Load The Data
 
+Download the dataset from [here](https://d17h27t6h515a5.cloudfront.net/topher/2017/February/5898cd6f_traffic-signs-data/traffic-signs-data.zip). This is a pickled dataset in which we've already resized the images to 32x32.
+
 We already have three `.p` files of 32x32 resized images:
 - `train.p`: The training set.
 - `test.p`: The testing set.
@@ -387,7 +389,11 @@ Number of new testing examples:  5
  </figcaption>
 </figure>
 
-Now we'll input these 5 images to the VGGNet model and output the top 5 softmax proabilities of each prediction.
+These test images include some easy to predict signs, and other signs are considered hard for the model to predict.
+
+For instance, we have easy to predict signs like the "Stop" and the "No entry". The two signs are clear and belong to classes where the model can predict with  high accuracy.
+
+On the other hand, we have signs belong to classes where has poor accuracy, like the "Speed limit" sign, because as stated above it turns out that the various speed limits are sometimes misclassified among themselves, and the "Pedestrians" sign, because traffic signs with traingular shape are misclassified among themselves.
 
 <figure>
  <img src="./traffic-signs-data/Screenshots/TopSoft.png" width="1072" alt="Combined Image" />
@@ -395,6 +401,12 @@ Now we'll input these 5 images to the VGGNet model and output the top 5 softmax 
  <p></p> 
  </figcaption>
 </figure>
+
+As we can notice from the top 5 softmax probabilities, the model has very high confidence (100%) when it comes to predict simple signs, like the "Stop" and the "No entry" sign, and even high confidence when predicting simple triangular signs in a very clear image, like the "Yield" sign.
+
+On the other hand, the model's confidence slightly reduces with more complex triangular sign in a "pretty noisy" image, in the "Pedestrian" sign image, we have a triangular sign with a shape inside it, and the images copyrights adds some noise to the image, the model was able to predict the true class, but with 80% confidence.
+
+And in the "Speed limit" sign, we can observe that the model accurately predicted that it's a "Speed limit" sign, but was somehow confused between the different speed limits. However, it predicted the true class at the end.
 
 The VGGNet model was able to predict the right class for each of the 5 new test images. Test Accuracy = 100.0%.
 In all cases, the model was very certain (80% - 100%).
